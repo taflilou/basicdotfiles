@@ -11,9 +11,6 @@
 # TODO:
 # +---------------+
 
-# Source .ate_conf file (custom parameters) => /home/taflilou/myconf/.ate_config.conf
-source $HOME/myconf/.ate_config.conf
-
 # Source .mylocalaliases
 source $HOME/.mylocalaliases
 
