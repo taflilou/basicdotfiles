@@ -1,0 +1,94 @@
+# +------------+
+# | my aliases |
+# +------------+
+
+# Author: Abdel TESSILIMI
+# Desc: dotfiles -> .myaliases (sourced by .zshrc)
+# History:
+# => v1.0: Initial status of .myaliases (2017-10-15)
+
+# +---------------+
+# TODO:
+# +---------------+
+
+# Source .ate_conf file (custom parameters) => /home/taflilou/myconf/.ate_config.conf
+source $HOME/myconf/.ate_config.conf
+
+# Source .mylocalaliases
+source $HOME/.mylocalaliases
+
+# Source .myworkspaces
+source $HOME/.myworkspaces
+
+# Source .myservers
+source $HOME/.myservers
+
+# Basic aliases
+alias ls='ls --color=auto'
+alias ll='ls -alh --color=auto'
+alias lrt='ls -alrt --color=auto'
+alias lsfull='ls -alrt --full-time'
+alias ws='cd ~/Desktop/myworkspace'
+
+# Moving into directories aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias cdd='cd ~/mydownloads'
+alias cdb='cd ~/mydownloads/browser'
+alias cdj='cd ~/mydownloads/jdowns'
+alias cdg='cd ~/mygit'
+
+# Update aliases
+alias miseajour='sudo apt-get update && sudo apt-get -y --allow-unauthenticated upgrade'
+alias autoremove="sudo apt autoremove"
+
+# Search aliases
+alias grep='grep --color=auto'
+
+# History aliases
+alias h='history'
+
+# Path aliases
+alias path='echo -e ${PATH//:/\\n}'
+
+# Date aliases
+alias now='date +"%T"'
+
+# Connectivity aliases
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+
+# Network ports aliases
+alias ports='netstat -tulapn'
+alias tcp_ports="netstat -vatn"
+alias udp_ports="netstat -vaun"
+
+# Networking aliases
+alias myip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d'B' -f 1 | cut -d':' -f 2'
+alias myexternalip='curl http://ifconfig.co'
+
+# User aliases
+alias root='sudo su'
+alias taflilou='sudo -iu taflilou'
+
+# Password aliases
+alias ineedpasswd="pwgen 15 1"
+
+# Getting things done
+alias k="kanban"
+
+# SERVICES
+# Rundeck
+alias startrundeck="sudo java -jar -Dserver.http.port=8020 /home/taflilou/myrundeck/rundeck-launcher-2.10.8.jar &"
+
+# Starting PyCharm
+alias startpycharm="charm &"
+
+# Pipenv
+alias prp="pipenv run python"
+
+# GOPATH
+export GOPATH=$HOME/go
